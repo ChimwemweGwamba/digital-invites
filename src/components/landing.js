@@ -1,9 +1,13 @@
 import React from 'react'
-
+import landing_img from '../assets/images/invite.png'
+import './styles.css'
 
 function Landing() {
   return (
-    <div>Landing</div>
+    <div className='imgContainer'>
+        <img src={landing_img} alt="invite"/>
+    </div>
+    
   )
 }
 

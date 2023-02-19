@@ -1,0 +1,10 @@
+.imgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.imgContainer img{
+    width: 100%;
+}
