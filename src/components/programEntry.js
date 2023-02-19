@@ -1,10 +1,18 @@
-import React from 'react'
-
+import React from "react";
+import styled from "styled-components";
 
 function ProgramEntry() {
   return (
-    <div>ProgramEntry</div>
-  )
+    <Container className="imgContainer">
+    </Container>
+  );
 }
 
-export default ProgramEntry
+const Container = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+export default ProgramEntry;
