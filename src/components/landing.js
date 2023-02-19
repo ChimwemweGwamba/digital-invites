@@ -4,7 +4,7 @@ import invite from "../assets/images/invite.png"
 
 function Landing() {
   return (
-    <Container className="imgContainer">
+    <Container>
       <Invite src={invite} alt="invite" />
     </Container>
   );
