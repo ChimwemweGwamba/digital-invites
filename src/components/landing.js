@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import invite from "../../assets/images/invite.png";
+import invite from "../assets/images/invite.png"
 
 function Landing() {
   return (
