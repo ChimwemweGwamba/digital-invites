@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ProgramEntry1 from "./programEntry1";
 import ProgramEntry2 from "./programEntry2"
+import icon from "../assets/images/guests.png";
 
 function Program() {
   return (
@@ -13,12 +14,8 @@ function Program() {
         </Heading>
       </Header>
 
-      <ProgramEntry1 />
-      <ProgramEntry2 />
-      <ProgramEntry1 />
-      <ProgramEntry2 />
-      <ProgramEntry1 />
-      <ProgramEntry2 />
+      <ProgramEntry1 time="08:02 Hrs" event="Arrival of Guests" eventSummary="Guests arrive at Church" icon={icon} />
+      <ProgramEntry2 time="08:02 Hrs" event="Arrival of Guests" eventSummary="Guests arrive at Church" icon={icon} />
     </Container>
   );
 }

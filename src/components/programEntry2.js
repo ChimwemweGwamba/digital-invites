@@ -1,20 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import icon from "../assets/images/guests.png";
 
-function ProgramEntry() {
+
+function ProgramEntry(props) {
   return (
     <Container>
       <LeftContainer>
-        <Event>Arrival Of Guests</Event>
+        <Event>{props.event}</Event>
 
-        <EventSummary>Guests arrive at Church</EventSummary>
+        <EventSummary>{props.eventSummary}</EventSummary>
       </LeftContainer>
 
       <RightContainer>
-        <Time>08:45 Hrs</Time>
+        <Time>{props.time}</Time>
 
-        <Icon src={icon} alt="guests" />
+        <Icon src={props.icon} alt="guests" />
       </RightContainer>
     </Container>
   );
