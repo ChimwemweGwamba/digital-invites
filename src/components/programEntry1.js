@@ -25,7 +25,7 @@ const Container = styled.div`
 `;
 
 const LeftContainer = styled.div`
-  border-right: solid 1px black;
+  border-right: solid 1px white;
   width: 50%;
   padding: 30px 0;
   display: flex;
@@ -33,7 +33,7 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  border-left: solid 1px black;
+  border-left: solid 1px white;
   width: 50%;
   padding: 30px 0;
   display: flex;
@@ -44,6 +44,7 @@ const Time = styled.h2`
   text-align: right;
   padding: 0 15px;
   margin: 0;
+  color: yellow;
 `;
 
 const Icon = styled.img`
@@ -57,15 +58,16 @@ const Event = styled.h3`
   text-align: left;
   margin: 0;
   padding: 0 10px;
+  color: red;
 `;
 
 const EventSummary = styled.p`
-  border-bottom: dashed 1px black;
+  border-bottom: dashed 1px white;
   text-align: left;
   padding: 0 0 0 10px;
   margin: 10 auto 0 0;
   width: 80%;
-  color: #626262;
+  color: yellow;
   font-style: italic;
 `;
 

@@ -8,10 +8,12 @@ import photos from '../assets/images/images.png'
 import married from "../assets/images/dove-.png"
 import dinner from "../assets/images/serving-dish.png"
 import thankYou from "../assets/images/chat-bubbles.png"
+import background from "../assets/images/scattered-forcefields.png"
+
 
 function Program() {
   return (
-    <Container>
+    <Container style={{ backgroundColor: `black` }}>
       <Header>
         <Title>Program</Title>
         <Heading>
@@ -43,19 +45,21 @@ const Header = styled.div`
 const Title = styled.h1`
   width: 100%;
   text-align: center;
+  color: white;
 `;
 
-const Heading = styled.h3`
+const Heading = styled.p`
   width: 80%;
   text-align: center;
   margin: 10px auto 30px auto;
+  color: white;
 `;
 
 const Bubble = styled.h3`
 height:12px;
 width:12px;
 border-radius: 10px;
-border: solid 2px black;
+border: solid 2px white;
 margin: 0 auto;
 `;
 
