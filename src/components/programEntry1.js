@@ -58,16 +58,15 @@ const Event = styled.h3`
   text-align: left;
   margin: 0;
   padding: 0 10px;
-  color: red;
+  color: white;
 `;
 
 const EventSummary = styled.p`
-  border-bottom: dashed 1px white;
+  border-bottom: dashed 1px yellow;
   text-align: left;
   padding: 0 0 0 10px;
   margin: 10 auto 0 0;
   width: 80%;
-  color: yellow;
   font-style: italic;
 `;
 

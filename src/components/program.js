@@ -8,7 +8,6 @@ import photos from '../assets/images/images.png'
 import married from "../assets/images/dove-.png"
 import dinner from "../assets/images/serving-dish.png"
 import thankYou from "../assets/images/chat-bubbles.png"
-import background from "../assets/images/scattered-forcefields.png"
 
 
 function Program() {
