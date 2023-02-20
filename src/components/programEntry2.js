@@ -26,7 +26,7 @@ const Container = styled.div`
 `;
 
 const LeftContainer = styled.div`
-  border-right: solid 1px blue;
+  border-right: solid 1px black;
   width: 50%;
   padding: 30px 0;
   display: flex;
@@ -34,7 +34,7 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  border-left: solid 1px blue;
+  border-left: solid 1px black;
   width: 50%;
   padding: 30px 0;
   display: flex;
@@ -61,11 +61,13 @@ const Event = styled.h3`
 `;
 
 const EventSummary = styled.p`
-  border-bottom: dashed 1px blue;
+  border-bottom: dashed 1px black;
   text-align: right;
   padding: 0 10px 0 0;
   margin: 10px 0 0 auto;
   width: 80%;
+  color: #626262;
+  font-style: italic;
 `;
 
 export default ProgramEntry;
