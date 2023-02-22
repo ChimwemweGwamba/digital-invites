@@ -48,8 +48,6 @@ const Heading = styled.h1`
 const Invited = styled.h1`
   color: black;
   padding: 10px 20px;
-  font-family: 'Allison';
-
   border-bottom: solid 2px black;
 `;
 
