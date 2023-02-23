@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { getDatabase, ref, get, child } from "firebase/database";
+import {  } from "../firebase";
+import { useNavigate } from "react-router-dom";
+
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState(260);
   const [errorMessage, setErrorMessage] = useState("");
+  const navigate = useNavigate();
   const dbRef = ref(getDatabase());
 
   const logIn = (data) => {
@@ -20,7 +24,7 @@ function Login() {
       .then((snapshot) => {
         if (snapshot.exists()) {
           logIn(snapshot.val())
-            ? console.log("Success")
+            ? navigate("/home")
             : setErrorMessage("Number entered is not on the guest list");
         } else {
           console.log("No data available");
