@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { getDatabase, ref, get, child } from "firebase/database";
-import {  } from "../firebase";
+import {} from "../firebase";
 import { useNavigate } from "react-router-dom";
-
+import { useGuest } from "../context/guestContext";
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState(260);
   const [errorMessage, setErrorMessage] = useState("");
+  const {
+    dispatch,
+  } = useGuest();
+
   const navigate = useNavigate();
   const dbRef = ref(getDatabase());
 
   const logIn = (data) => {
     for (let i = 0; i < data.length; i++) {
       if (data[i].phoneNumber === Number(phoneNumber)) {
-        return true;
+        return data[i]
       }
     }
   };
@@ -23,8 +27,15 @@ function Login() {
     get(child(dbRef, `guests/`))
       .then((snapshot) => {
         if (snapshot.exists()) {
-          logIn(snapshot.val())
-            ? navigate("/home")
+          const guest = logIn(snapshot.val());
+          guest
+            ? dispatch(
+                {
+                  type: "SET_GUEST",
+                  payload: guest,
+                },
+                navigate("/home")
+              )
             : setErrorMessage("Number entered is not on the guest list");
         } else {
           console.log("No data available");
