@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import background from "../assets/images/1.png";
 import { useGuest } from "../context/guestContext";
+import background from "../assets/images/back2.png"
 import "../index.css";
 import { updateGuest } from "../firebase";
 
@@ -31,7 +31,7 @@ function Rsvp() {
     <Container style={{ backgroundImage: `url(${background})` }}>
       <Heading>RSVP</Heading>
 
-      <p>By 10th November 2023 {guest.invitation_response}</p>
+      <p>By 10 March 2023 {guest.invitation_response}</p>
 
       {guest.name && <Invited>{guest.name}</Invited>}
 
@@ -72,9 +72,10 @@ function Rsvp() {
             style={{
               margin: "30px",
               padding: "10px 30px",
-              backgroundColor: "black",
-              border: "solid 1px black",
-              color: "white",
+              backgroundColor: "transparent",
+              border: "solid 2px #ffffee",
+              color: "#ffffee",
+              fontWeight: 'bold',
               borderRadius: "3px",
             }}
           />
@@ -93,28 +94,33 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: #ffffee;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
   height: 100vh;
 `;
 
 const Heading = styled.h1`
-  color: black;
-  /* font-family: "Allison"; */
-  font-weight: 900;
-  font-size: 70px;
+  color: #ffffee;
+  font-size: 90px;
+  font-weight: 200;
   margin-bottom: 50px;
 `;
 
 const Invited = styled.h1`
-  color: black;
+  color: #ffffee;
   padding: 10px 20px;
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px #ffffee;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 50px;
+  margin: 20px;
 `;
 
 const Checkbox = styled.input`

@@ -33,7 +33,7 @@ const LeftContainer = styled.div`
 `;
 
 const RightContainer = styled.div`
-  border-left: solid 1px white;
+  border-left: solid 1px #bc9c22;
   width: 50%;
   padding: 30px 0;
   display: flex;
@@ -44,7 +44,7 @@ const Time = styled.h2`
   text-align: right;
   padding: 0 15px;
   margin: 0;
-  color: yellow;
+  color: #bc9c22;
 `;
 
 const Icon = styled.img`
@@ -58,11 +58,11 @@ const Event = styled.h3`
   text-align: left;
   margin: 0;
   padding: 0 10px;
-  color: white;
+  color: black;
 `;
 
 const EventSummary = styled.p`
-  border-bottom: dashed 1px yellow;
+  border-bottom: dashed 1px #bc9c22;
   text-align: left;
   padding: 0 0 0 10px;
   margin: 10 auto 0 0;

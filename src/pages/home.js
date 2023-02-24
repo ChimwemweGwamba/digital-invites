@@ -8,8 +8,8 @@ import Invite from "../components/invite";
 function Home() {
   return (
     <div>
-      <Invite/>
       <Landing />
+      <Invite/>
       <Info />
       <Rsvp />
       <Program />

@@ -47,14 +47,23 @@ function Login() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    getGuestList();
+
+    //temporal admin navigation
+    if(phoneNumber === "260111"){
+      navigate("/guests")
+    }
+    else{
+      getGuestList();
+    }
+
+
   };
 
   return (
     <Container>
       <Img src={rings} alt="rings" />
       <Form onSubmit={handleSubmit}>
-        <label style={{  color: "#d17d84"}}>
+        <label style={{  color: "#bc9c22"}}>
           Enter your phone number to access invite
           <Input
             type="number"
@@ -75,12 +84,12 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 95vh;
   text-align: center;
 `;
 
 const Img = styled.img`
-  width: 70%;
+  width: 85%;
   margin: 0;
   margin-bottom: 20px;
 `;
@@ -95,9 +104,9 @@ const Input = styled.input`
   height: 40px;
   margin: 10px 0;
   padding: 0;
-  border: solid 1px #d17d84;
+  border: solid 1px #bc9c22;
   text-align: center;
-  color: #d17d84;
+  color: #bc9c22;
 `;
 
 const Button = styled.button`
@@ -106,8 +115,8 @@ const Button = styled.button`
   padding: 10px 0;
   font-size: 15px;
   color: white;
-  background-color: #d17d84;
-  border: solid 1px #d17d84;
+  background-color: #bc9c22;
+  border: solid 1px #bc9c22;
 `;
 
 const ErrorMessage = styled.p`

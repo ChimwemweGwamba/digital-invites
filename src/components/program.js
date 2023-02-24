@@ -16,7 +16,7 @@ function Program() {
   } = useGuest();
 
   return (
-    <Container style={{ backgroundColor: `black` }}>
+    <Container style={{ backgroundColor: `#ffffee` }}>
       <Header>
         <Title>Program</Title>
         <Heading>This Is How Things Will Flow</Heading>
@@ -82,21 +82,21 @@ const Header = styled.div`
 const Title = styled.h1`
   width: 100%;
   text-align: center;
-  color: white;
+  color: #bc9c22;
 `;
 
 const Heading = styled.p`
   width: 80%;
   text-align: center;
   margin: 10px auto 30px auto;
-  color: white;
+  color: black;
 `;
 
 const Bubble = styled.h3`
   height: 12px;
   width: 12px;
   border-radius: 10px;
-  border: solid 2px white;
+  border: solid 2px #bc9c22;
   margin: 0 auto;
 `;
 

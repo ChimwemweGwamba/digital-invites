@@ -4,13 +4,12 @@ import styled from "styled-components";
 function Info() {
   return (
     <Container>
-      <Title>Event Details</Title>
+      {/* <Title>Event Details</Title> */}
 
-      <Card style={{ border: "solid 1px #c7c7ff" }}>
+      <Card>
         <Heading
           style={{
-            color: "rgba(149,149,255,1)",
-            borderBottom: "solid 1px rgba(149,149,255,1)",
+            color: "#bc9c22",
           }}
         >
           Location
@@ -20,16 +19,15 @@ function Info() {
           maps link below to assist you with directions.
         </CardText>
 
-        <a href="https://volvec-technology-58ee2.web.app/">
-          <p>View directions</p>
+        <a href="https://maps.app.goo.gl/HERaowsDz6WH1B9X7/">
+          <p style={{textAlign: "center"}}>View directions</p>
         </a>
       </Card>
 
-      <Card style={{ border: "solid 1px #a9ecbf" }}>
+      <Card>
         <Heading
           style={{
-            color: "rgba(66,193,110,1)",
-            borderBottom: "solid 1px rgba(66,193,110,1)",
+            color: "#bc9c22",
           }}
         >
           Gifts
@@ -41,11 +39,10 @@ function Info() {
         </CardText>
       </Card>
 
-      <Card style={{ border: "solid 1px #f3bbe1" }}>
+      <Card>
         <Heading
           style={{
-            color: "rgba(220,91,183,1)",
-            borderBottom: "solid 1px rgba(220,91,183,1)",
+            color: "#bc9c22",
           }}
         >
           Children
@@ -62,32 +59,33 @@ function Info() {
 
 const Container = styled.div`
   padding: 100px 5%;
-  background-color: black;
+  background-color: #ffffee;
 `;
 
 const Title = styled.h1`
-  color: white;
-  font-weight: 200;
+  color: #bc9c22;
+  font-weight: 600;
   text-align: center;
+  margin: 0;
 `;
 
 const Card = styled.div`
-  padding: 50px 5%;
-  margin: 50px 0;
+  padding: 20px 5%;
+  margin: 20px 0;
+  border: solid 1px #bc9c22;
   border-radius: 5px;
 `;
 
 const Heading = styled.h1`
-  text-align: left;
+  text-align: center;
   text-transform: capitalize;
-  font-weight: 900;
-  margin-bottom: 50px;
-  padding-bottom: 5px;
+  font-weight: 300;
+  margin-bottom: 20px;
 `;
 
 const CardText = styled.p`
-  text-align: justify;
-  color: white;
+  text-align: center;
+  color: black;
   font-size: 18px;
   line-height: 30px;
 `;
