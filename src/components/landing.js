@@ -15,6 +15,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  background-color: #ffffee;
 `;
 
 const Invite = styled.img`

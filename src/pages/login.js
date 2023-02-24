@@ -4,6 +4,7 @@ import { getDatabase, ref, get, child } from "firebase/database";
 import "../firebase";
 import { useNavigate } from "react-router-dom";
 import { useGuest } from "../context/guestContext";
+import rings from "../assets/images/rings.png"
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState(260);
@@ -51,6 +52,7 @@ function Login() {
 
   return (
     <Container>
+      <Img src={rings} alt="rings" />
       <Form onSubmit={handleSubmit}>
         <label>
           Enter your phone number to access invite
@@ -77,6 +79,12 @@ const Container = styled.div`
   text-align: center;
 `;
 
+const Img = styled.img`
+  width: 70%;
+  margin: 0;
+  margin-bottom: 20px;
+`;
+
 const Form = styled.form`
   width: 90%;
   margin: 0;
@@ -84,22 +92,22 @@ const Form = styled.form`
 
 const Input = styled.input`
   width: 100%;
-  height: 35px;
+  height: 40px;
   margin: 10px 0;
   padding: 0;
-  border: solid 1px black;
+  border: solid 1px #d17d84;
   text-align: center;
+  color: #d17d84;
 `;
 
 const Button = styled.button`
-  color: red;
   width: 100%;
-  margin: 10px 0;
+  margin: 0 0;
   padding: 10px 0;
   font-size: 15px;
   color: white;
-  background-color: blue;
-  border: solid 1px blue;
+  background-color: #d17d84;
+  border: solid 1px #d17d84;
 `;
 
 const ErrorMessage = styled.p`

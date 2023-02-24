@@ -4,8 +4,17 @@ import styled from "styled-components";
 function Info() {
   return (
     <Container>
-      <Card style={{ border: 'solid 1px #c7c7ff' }}>
-        <Heading style={{ color: 'rgba(149,149,255,1)', borderBottom: 'solid 1px rgba(149,149,255,1)' }}>Location</Heading>
+      <Title>Event Details</Title>
+
+      <Card style={{ border: "solid 1px #c7c7ff" }}>
+        <Heading
+          style={{
+            color: "rgba(149,149,255,1)",
+            borderBottom: "solid 1px rgba(149,149,255,1)",
+          }}
+        >
+          Location
+        </Heading>
         <CardText>
           Our venue is located in the peri urban area of Makeni, see the google
           maps link below to assist you with directions.
@@ -16,17 +25,31 @@ function Info() {
         </a>
       </Card>
 
-      <Card style={{ border: 'solid 1px #a9ecbf' }}>
-        <Heading style={{ color: 'rgba(66,193,110,1)',  borderBottom: 'solid 1px rgba(66,193,110,1)' }}>Gifts</Heading>
+      <Card style={{ border: "solid 1px #a9ecbf" }}>
+        <Heading
+          style={{
+            color: "rgba(66,193,110,1)",
+            borderBottom: "solid 1px rgba(66,193,110,1)",
+          }}
+        >
+          Gifts
+        </Heading>
         <CardText>
           With what we have we are truly blessed, but your presence and prayers
           we need. To the desire of your giving heart we especially suggest
           monetary gifts of a minimum of K500.
         </CardText>
       </Card>
-      
-      <Card style={{ border: 'solid 1px #f3bbe1'}}>
-        <Heading style={{ color: 'rgba(220,91,183,1)', borderBottom: 'solid 1px rgba(220,91,183,1)' }}>Children</Heading>
+
+      <Card style={{ border: "solid 1px #f3bbe1" }}>
+        <Heading
+          style={{
+            color: "rgba(220,91,183,1)",
+            borderBottom: "solid 1px rgba(220,91,183,1)",
+          }}
+        >
+          Children
+        </Heading>
         <CardText>
           Although we love your children we regretfully cannot accomodate them
           at the venue due to restricted numbers. We hope you see this as an
@@ -40,6 +63,12 @@ function Info() {
 const Container = styled.div`
   padding: 100px 5%;
   background-color: black;
+`;
+
+const Title = styled.h1`
+  color: white;
+  font-weight: 200;
+  text-align: center;
 `;
 
 const Card = styled.div`
