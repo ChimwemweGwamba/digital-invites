@@ -54,7 +54,7 @@ function Login() {
     <Container>
       <Img src={rings} alt="rings" />
       <Form onSubmit={handleSubmit}>
-        <label>
+        <label style={{  color: "#d17d84"}}>
           Enter your phone number to access invite
           <Input
             type="number"
