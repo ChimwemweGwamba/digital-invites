@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import background from "../assets/images/1.png";
 import { useGuest } from "../context/guestContext";
@@ -13,7 +13,7 @@ function Rsvp() {
   const [invitation, setInvitation] = useState(null);
 
   const invitationResponse = (guest) => {
-    guest.invitation_response = "";
+    guest.invitation_response = invitation;
     dispatch(
       {
         type: "SET_GUEST",
@@ -46,7 +46,7 @@ function Rsvp() {
             }}
           >
             Invitation <b>accepted</b>, present this card at the door when
-            attending wedding reception.
+            attending the wedding reception.
             <br />
             <br />
             <b>Guest Number: {guest.id}</b>
@@ -101,7 +101,7 @@ const Heading = styled.h1`
   /* font-family: "Allison"; */
   font-weight: 900;
   font-size: 70px;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 `;
 
 const Invited = styled.h1`

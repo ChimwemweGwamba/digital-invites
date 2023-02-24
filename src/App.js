@@ -4,6 +4,7 @@ import Home from "./pages/home";
 import Login from "./pages/login";
 import Admin from "./pages/admin";
 import { GuestContext } from "./context/guestContext";
+import Guests from "./pages/guests";
 
 function App() {
   const guestReducer = (state, action) => {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/admin" element={<Admin />} />
+          <Route path="/guests" element={<Guests />} />
         </Routes>
       </BrowserRouter>
     </GuestContext.Provider>

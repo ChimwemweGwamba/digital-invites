@@ -7,8 +7,8 @@ import Rsvp from "../components/rsvp";
 function Home() {
   return (
     <div>
-      {/* <Landing />
-      <Info /> */}
+      <Landing />
+      <Info />
       <Rsvp />
       <Program />
     </div>
