@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { getDatabase, ref, get, child } from "firebase/database";
-import {} from "../firebase";
+import "../firebase";
 import { useNavigate } from "react-router-dom";
 import { useGuest } from "../context/guestContext";
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState(260);
   const [errorMessage, setErrorMessage] = useState("");
-  const {
-    dispatch,
-  } = useGuest();
+  const { dispatch } = useGuest();
 
   const navigate = useNavigate();
   const dbRef = ref(getDatabase());
 
   const logIn = (data) => {
     for (let i = 0; i < data.length; i++) {
-      if (data[i].phoneNumber === Number(phoneNumber)) {
-        return data[i]
+      if (data[i].phone_number === phoneNumber) {
+        return data[i];
       }
     }
   };
@@ -55,7 +53,7 @@ function Login() {
     <Container>
       <Form onSubmit={handleSubmit}>
         <label>
-          Enter your phone number to login
+          Enter your phone number to access invite
           <Input
             type="number"
             value={phoneNumber}

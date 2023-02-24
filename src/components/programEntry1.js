@@ -67,6 +67,7 @@ const EventSummary = styled.p`
   padding: 0 0 0 10px;
   margin: 10 auto 0 0;
   width: 80%;
+  color: #626262;
   font-style: italic;
 `;
 

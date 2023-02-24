@@ -13,19 +13,14 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase();
-const reference = ref(db, "guests/" + 0);
+const app = initializeApp(firebaseConfig)
+const db = getDatabase()
 
 
-function createGuest() {
-  set(reference, {
-    name: "Tom",
-    phoneNumber: 260999,
-    response: true,
-    entry_status: true,
-    church_service: true,
-  });
+function updateGuest(guest, guestId) {
+  const reference = ref(db, "guests/" + guestId )
+
+ set(reference, guest)
 }
 
-export { reference };
+export { updateGuest };
