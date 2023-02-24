@@ -9,6 +9,7 @@ import married from "../assets/images/dove-.png";
 import dinner from "../assets/images/serving-dish.png";
 import thankYou from "../assets/images/chat-bubbles.png";
 import { useGuest } from "../context/guestContext";
+import background from "../assets/images/back1.png";
 
 function Program() {
   const {
@@ -16,7 +17,7 @@ function Program() {
   } = useGuest();
 
   return (
-    <Container style={{ backgroundColor: `#ffffee` }}>
+    <Container style={{ backgroundImage: `url(${background})` }}>
       <Header>
         <Title>Program</Title>
         <Heading>This Is How Things Will Flow</Heading>
@@ -28,7 +29,7 @@ function Program() {
         <div>
           <ProgramEntry1
             time="09:30 Hrs"
-            event="Church Service"
+            event="Arrival Of Guests"
             eventSummary="Guests arrive at Church"
             icon={icon}
           />
@@ -38,29 +39,37 @@ function Program() {
             eventSummary="Marriage blessing"
             icon={rings}
           />
+
           <ProgramEntry1
             time="12:00 Hrs"
-            event="Photos"
-            eventSummary="We take photos"
+            event="Photos & Refreshments"
+            eventSummary="We take some photos"
             icon={photos}
           />
         </div>
       )}
 
       <ProgramEntry2
+        time="14:30 Hrs"
+        event="Arrival Of Guests"
+        eventSummary="Guests arrive for reception"
+        icon={icon}
+      />
+
+      <ProgramEntry1
         time="15:00 Hrs"
         event="Reception"
         eventSummary="We celebrate the marriage"
         icon={married}
       />
-      <ProgramEntry1
+      <ProgramEntry2
         time="16:00 Hrs"
         event="Dinner"
         eventSummary="We eat"
         icon={dinner}
       />
-      <ProgramEntry2
-        time="18:30 Hrs"
+      <ProgramEntry1
+        time="18:00 Hrs"
         event="Close"
         eventSummary="End of event"
         icon={thankYou}
@@ -73,6 +82,11 @@ function Program() {
 const Container = styled.div`
   width: 100%;
   padding: 30px 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-attachment: fixed;
 `;
 
 const Header = styled.div`
@@ -83,6 +97,7 @@ const Title = styled.h1`
   width: 100%;
   text-align: center;
   color: #bc9c22;
+  font-weight: 300;
 `;
 
 const Heading = styled.p`

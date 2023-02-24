@@ -19,8 +19,21 @@ function Info() {
           maps link below to assist you with directions.
         </CardText>
 
-        <a href="https://maps.app.goo.gl/HERaowsDz6WH1B9X7/">
-          <p style={{textAlign: "center"}}>View directions</p>
+        <a
+          href="https://maps.app.goo.gl/HERaowsDz6WH1B9X7/"
+          style={{ textDecoration: "none" }}
+        >
+          <p
+            style={{
+              textAlign: "center",
+              color: "#9f7b38",
+              borderBottom: "solid 1px #9f7b38",
+              width: "50%",
+              margin: "auto",
+            }}
+          >
+            view directions
+          </p>
         </a>
       </Card>
 
@@ -48,9 +61,10 @@ function Info() {
           Children
         </Heading>
         <CardText>
-          Although we love your children we regretfully cannot accomodate them
-          at the venue due to restricted numbers. We hope you see this as an
-          oppotunity to let your hair down and enjoy the party with us.
+          While we hold a great fondness for your children, we regretfully
+          cannot accomodate them at the venue due to restricted numbers. We hope
+          you see this as an oppotunity to let your hair down and enjoy the
+          party with us.
         </CardText>
       </Card>
     </Container>
@@ -62,17 +76,10 @@ const Container = styled.div`
   background-color: #ffffee;
 `;
 
-const Title = styled.h1`
-  color: #bc9c22;
-  font-weight: 600;
-  text-align: center;
-  margin: 0;
-`;
-
 const Card = styled.div`
   padding: 20px 5%;
   margin: 20px 0;
-  border: solid 1px #bc9c22;
+  border: solid 1px #9f7b38;
   border-radius: 5px;
 `;
 
@@ -85,7 +92,7 @@ const Heading = styled.h1`
 
 const CardText = styled.p`
   text-align: center;
-  color: black;
+  color: #9f7b38;
   font-size: 18px;
   line-height: 30px;
 `;

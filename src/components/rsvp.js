@@ -31,7 +31,7 @@ function Rsvp() {
     <Container style={{ backgroundImage: `url(${background})` }}>
       <Heading>RSVP</Heading>
 
-      <p>By 10 March 2023 {guest.invitation_response}</p>
+      <p>By 10th March 2023</p>
 
       {guest.name && <Invited>{guest.name}</Invited>}
 
