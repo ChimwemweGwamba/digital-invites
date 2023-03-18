@@ -38,7 +38,8 @@ function Guests() {
         {guestList &&
           guestList.map((guest) => (
             <tr>
-              <TableDes>{guest.name}</TableDes>
+              <TableDes>{guest.name}<br/>
+              {guest.phone_number}</TableDes>
               {
                 guest.invitation_response === true ?
                 (

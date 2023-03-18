@@ -13,7 +13,7 @@ function Rsvp() {
   const [invitation, setInvitation] = useState(null);
 
   const invitationResponse = (guest) => {
-    guest.invitation_response = invitation;
+    guest.invitation_response = Boolean(invitation);
     dispatch(
       {
         type: "SET_GUEST",
@@ -41,7 +41,7 @@ function Rsvp() {
             style={{
               margin: "25px",
               marginBottom: "0",
-              color: "black",
+              color: "white",
               textAlign: "center",
             }}
           >
